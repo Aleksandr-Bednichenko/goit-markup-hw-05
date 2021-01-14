@@ -10,7 +10,7 @@
   --button-background-color: #f5f4fa;
   --white-background-color: #ffffff;
   --fill-icons-color: #afb1b8;
-  --timing-opacity: 1500ms;
+  --timing-opacity: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
