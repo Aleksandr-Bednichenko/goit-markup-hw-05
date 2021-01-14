@@ -49,7 +49,7 @@
             <div class="overley">                
                 <div class="hero-width">
                     <h1 class="hero-text">Эффективные решения для вашего бизнеса</h1>
-                    <button type="button" class="hero-button">Заказать услугу</button>  
+                    <button data-modal-open type="button" class="hero-button" >Заказать услугу</button>  
                 </div>              
             </div>
         </section>
@@ -432,5 +432,25 @@
             </div>
         </section>        
     </footer>
+    <div class="backdrop is-hidden data-modal ">
+        <div class="modal">
+            <button data-modal-close><img class="modal-img" src="./img/close.svg" alt=""></button>
+        </div>
+    </div>
+
+    <script>
+         const refs = {
+            openModalBtn: document.querySelector('[data-modal-open]'),
+            closeModalBtn: document.querySelector('[data-modal-close]'),
+            modal: document.querySelector('[data-modal]'),
+            };
+
+            refs.openModalBtn.addEventListener('click', toggleModal);
+            refs.closeModalBtn.addEventListener('click', toggleModal);
+
+            function toggleModal() {
+                refs.modal.classList.toggle('is-hidden');
+            }
+    </script>
 </body>
 </html>
