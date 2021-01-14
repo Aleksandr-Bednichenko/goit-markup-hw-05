@@ -745,7 +745,6 @@ body {
 
 .project-elements {
   display: block;
-  overflow: hidden;
 
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
@@ -770,7 +769,6 @@ body {
 
 .project-element {
   display: block;
-  position: relative;
 }
 
 .project-img {
@@ -803,11 +801,17 @@ body {
   background-color: var(--hover-text-color);
   color: var(--white-text-color);
 }
+
+.projects-anime {
+  position: relative;
+  overflow: hidden;
+}
+
 .project-overley {
   display: block;
   position: absolute;
   width: 100%;
-  height: calc(100% - 110px);
+  height: 100%;
   top: 0;
   left: 0;
   transform: translateY(calc(100% + 110px));
