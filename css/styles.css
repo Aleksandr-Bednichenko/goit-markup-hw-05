@@ -10,7 +10,7 @@
   --button-background-color: #f5f4fa;
   --white-background-color: #ffffff;
   --fill-icons-color: #afb1b8;
-  --timing-opacity: 250ms;
+  --timing-opacity: 2000ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -817,17 +817,15 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  transform: translateY(calc(100% + 110px));
+  transform: translateY(100%);
   transition-property: transform;
   transition: transform var(--timing-opacity) var(--timing-function);
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
 }
 
 .project-element:hover .project-overley,
 .project-element:focus .project-overley {
   transform: translateY(0);
-  opacity: 1;
 }
 
 .overley-text {
@@ -861,6 +859,8 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
+
+  transition: opacity var(--timing-opacity) var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -868,11 +868,17 @@ body {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform var(--timing-opacity) var(--timing-function);
 
   min-height: 581px;
   min-width: 521px;
