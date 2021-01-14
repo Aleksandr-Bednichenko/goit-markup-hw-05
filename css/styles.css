@@ -102,6 +102,10 @@ body {
   color: var(--hover-text-color);
 }
 
+.active-links.header-links{
+  color: var(--hover-text-color);
+}
+
 .active-links::after {
   content: '';
   display: block;
